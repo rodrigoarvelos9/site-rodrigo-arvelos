@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agendar conversa | Rodrigo Arvelos</title>
+<meta name="description" content="Preencha seus dados e fale diretamente com Rodrigo Arvelos pelo WhatsApp para agendar sua conversa inicial.">
+<meta name="theme-color" content="#0a1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo">Rodrigo Arvelos<span>Planejamento Patrimonial</span></a>
+    <nav class="main">
+      <a class="navlink" href="index.html">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap lead-shell">
+  <div class="lead-card">
+
+    <div id="form-state">
+      <a href="index.html" class="lead-back">&larr; Voltar</a>
+      <span class="eyebrow">Agendar conversa</span>
+      <h1>Vamos entender seu momento.</h1>
+      <p class="lede">Preencha os campos abaixo. Ao enviar, o WhatsApp abre automaticamente com sua mensagem pronta — a conversa continua direto comigo.</p>
+
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 90000-0000" required autocomplete="tel">
+          <div class="hint">Com DDD. É por aqui que a conversa acontece.</div>
+        </div>
+
+        <div class="field">
+          <label for="objetivo">Objetivo principal</label>
+          <select id="objetivo" name="objetivo" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Diversificar e sair do banco">Diversificar e sair do banco</option>
+            <option value="Reduzir imposto de renda">Reduzir imposto de renda</option>
+            <option value="Planejamento sucessório">Planejamento sucessório / herança</option>
+            <option value="Aposentadoria e longo prazo">Aposentadoria e longo prazo</option>
+            <option value="Ainda não sei, quero entender">Ainda não sei, quero entender</option>
+          </select>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">Concordo em ser contatado por WhatsApp para tratar da minha estratégia patrimonial.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary lead-submit">Quero agendar minha conversa</button>
+      </form>
+    </div>
+
+    <div id="thanks" class="thanks">
+      <span class="eyebrow">Recebido</span>
+      <h2>Se o WhatsApp não abriu sozinho, toque no botão abaixo.</h2>
+      <p>Sua mensagem já está pronta — é só confirmar o envio por lá.</p>
+      <a id="waFallback" class="btn btn-primary" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="fname">Rodrigo Arvelos</div>
+      <div class="froles">CFP&reg; &middot; Planejamento Patrimonial</div>
+    </div>
+    <p class="disclaimer">Seus dados são usados apenas para este primeiro contato e não são compartilhados com terceiros.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
