@@ -42,6 +42,7 @@ export default async function handler(req, res) {
   const properties = {
     "Nome": { title: [{ text: { content: String(nome).slice(0, 200) } }] },
     "WhatsApp": { phone_number: String(whatsapp).slice(0, 100) },
+    "Status": { select: { name: "Novo" } },
   };
   if (objetivo) properties["Objetivo"] = { select: { name: String(objetivo).slice(0, 100) } };
   if (patrimonio) properties["Faixa de patrimônio"] = { select: { name: String(patrimonio).slice(0, 100) } };
