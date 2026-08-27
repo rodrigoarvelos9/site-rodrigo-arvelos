@@ -35,12 +35,14 @@
         <div class="field">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" required autocomplete="name">
+          <p class="err">Preencha seu nome para eu saber com quem falo.</p>
         </div>
 
         <div class="field">
           <label for="whatsapp">WhatsApp</label>
-          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 90000-0000" required autocomplete="tel">
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 90000-0000" required autocomplete="tel" inputmode="tel">
           <div class="hint">Com DDD. É por aqui que a conversa acontece.</div>
+          <p class="err">Informe o número com DDD — faltam dígitos.</p>
         </div>
 
         <div class="field">
@@ -53,17 +55,19 @@
             <option value="Aposentadoria e longo prazo">Aposentadoria e longo prazo</option>
             <option value="Ainda não sei / quero entender">Ainda não sei, quero entender</option>
           </select>
+          <p class="err">Escolha um objetivo — é por onde a conversa começa.</p>
         </div>
 
         <div class="field">
           <label for="patrimonio">Faixa de patrimônio investido</label>
           <select id="patrimonio" name="patrimonio">
-            <option value="" disabled selected>Selecione (opcional)</option>
+            <option value="" selected>Selecione (opcional)</option>
             <option value="Até R$500 mil">Até R$500 mil</option>
             <option value="R$500 mil a R$2 milhões">R$500 mil a R$2 milhões</option>
             <option value="Acima de R$2 milhões">Acima de R$2 milhões</option>
             <option value="Prefiro não informar agora">Prefiro não informar agora</option>
           </select>
+          <div class="hint">Ou o valor que você pretende investir. Ajuda a preparar a conversa.</div>
         </div>
 
         <div class="consent">
@@ -77,7 +81,7 @@
 
     <div id="thanks" class="thanks">
       <span class="eyebrow">Recebido</span>
-      <h2>Se o WhatsApp não abriu sozinho, toque no botão abaixo.</h2>
+      <h2 tabindex="-1">Se o WhatsApp não abriu sozinho, toque no botão abaixo.</h2>
       <p>Sua mensagem já está pronta — é só confirmar o envio por lá.</p>
       <a id="waFallback" class="btn btn-primary" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
     </div>
